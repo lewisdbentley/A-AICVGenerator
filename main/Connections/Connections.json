@@ -1,0 +1,61 @@
+{
+  "9f651e5d-72f4-4701-92c3-ae84f4f11918": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://capgemini-my.sharepoint.com/personal/lewis_bentley_capgemini_com": {
+        "dataSources": {
+          "Example CVs V2": {
+            "tableName": "3d56fecb-3a84-42b9-877b-a1a17b3d3d6d"
+          },
+          "Example Experiences": {
+            "tableName": "f58df587-4c1f-4a8a-b550-a700a3af0f04"
+          },
+          "Example Skills": {
+            "tableName": "3053daa1-7d9d-414b-a454-bef91efe4ab6"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Example Skills",
+      "Example CVs V2",
+      "Example Experiences"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "9f651e5d-72f4-4701-92c3-ae84f4f11918"
+  },
+  "c8225854-a37c-41e4-8c9a-82b9c9a7f87c": {
+    "appActions": [
+      "MyProfile",
+      "MyProfile_V2"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1672/1.0.1672.3545/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c8225854-a37c-41e4-8c9a-82b9c9a7f87c"
+  }
+}

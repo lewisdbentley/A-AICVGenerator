@@ -1,0 +1,99 @@
+Skills As screen:
+    OnVisible: |
+        =ClearCollect(UserSkillsRatings, {})
+
+    ComboBoxSkill As combobox:
+        DisplayFields: =["Value"]
+        Items: =["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Agile Concepts","AWS","Azure","Devops & Tooling (e.g. Git, Jenkins)","GCP","RDBMS","Graph DBs","Hive","Elasticsearch","Databricks","Dataiku","Snowflake","Teradata","Data Robot","Pandas","Spark","Airflow","MLFlow","Kedro","TFX","Scikit-Learn","Tensorflow","PyTorch","Keras","Looker","Power BI","Shiny","Tableau","React","Flask","HTML",".NET","Go","JS","Java / Scala","Python","R","Rust","Shell","SQL"],ComboBoxSkill.SearchText,"Value")
+        SelectMultiple: =false
+        X: =40
+        Y: =68
+        ZIndex: =1
+
+    ComboBoxRating As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =[5, 4, 3, 2, 1]
+        SearchFields: =[""]
+        SearchItems: =[]
+        SelectMultiple: =false
+        X: =413
+        Y: =68
+        ZIndex: =2
+
+    AddSkill As button:
+        OnSelect: |-
+            =Patch('Example Skills', Defaults('Example Skills'), {
+                    UserID: CurrentUserID,
+                    Skill: ComboBoxSkill.Selected.Value,
+                    Rating: ComboBoxRating.Selected.Value
+            });
+            Reset(ComboBoxSkill);
+            Reset(ComboBoxRating);
+        Text: ="Add Skill"
+        X: =781
+        Y: =68
+        ZIndex: =3
+
+    Container5_3 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =80
+        LayoutGap: =30
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingTop: =40
+        Width: =697
+        X: =340
+        Y: =652
+        ZIndex: =5
+
+        Button3_2 As button:
+            OnSelect: =Back()
+            Text: |-
+                ="Back
+                "
+            ZIndex: =1
+
+        Button4_2 As button:
+            OnSelect: =Navigate(Experiences)
+            Text: |-
+                ="Next
+                "
+            ZIndex: =2
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =496
+        Items: =Filter('Example Skills', UserID = CurrentUserID)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =50
+        Width: =901
+        X: =40
+        Y: =132
+        ZIndex: =6
+
+        LabelSkill As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Skill
+            X: =38
+            Y: =10
+            ZIndex: =1
+
+        LabelRating As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Rating
+            X: =144
+            Y: =10
+            ZIndex: =2
+
+        Icon5 As icon.Trash:
+            Height: =35
+            Icon: =Icon.Trash
+            OnSelect: =Remove('Example Skills', ThisItem)
+            Width: =42
+            X: =813
+            Y: =10
+            ZIndex: =3
+

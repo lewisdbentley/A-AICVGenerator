@@ -1,0 +1,121 @@
+Experiences As screen:
+
+    ComboBoxRole As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =["Business Analyst"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Business Analyst"],ComboBoxRole.SearchText,"Value")
+        SelectMultiple: =false
+        X: =50
+        Y: =134
+        ZIndex: =2
+
+    TextTitle As text:
+        Default: ="Text input"
+        X: =50
+        Y: =68
+        ZIndex: =4
+
+    ComboBoxRank As combobox:
+        DisplayFields: =["Value"]
+        IsSearchable: =false
+        Items: =["Lead"]
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Lead"],ComboBoxRank.SearchText,"Value")
+        SelectMultiple: =false
+        X: =416
+        Y: =134
+        ZIndex: =5
+
+    DatePickerStartDate As datepicker:
+        X: =50
+        Y: =201
+        ZIndex: =6
+
+    DatePickerEndDate As datepicker:
+        X: =414
+        Y: =201
+        ZIndex: =7
+
+    TextClient As text:
+        Default: ="Text input"
+        X: =414
+        Y: =68
+        ZIndex: =8
+
+    TextInputDescription As text:
+        Default: ="Text input"
+        Height: =92
+        Width: =692
+        X: =50
+        Y: =269
+        ZIndex: =9
+
+    Container5_4 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =80
+        LayoutGap: =30
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingTop: =40
+        Width: =697
+        X: =340
+        Y: =652
+        ZIndex: =10
+
+        Button3_3 As button:
+            OnSelect: =Back()
+            Text: |-
+                ="Back
+                "
+            ZIndex: =1
+
+        Button4_3 As button:
+            OnSelect: =
+            Text: |-
+                ="Next
+                "
+            ZIndex: =2
+
+    Button1 As button:
+        OnSelect: |
+            =Patch('Example Experiences', Defaults('Example Experiences'), {
+                    UserID: CurrentUserID,
+                    Title: TextTitle.Text,
+                    Client: TextClient.Text,
+                    Role: ComboBoxRole.Selected.Value,
+                    Rank: ComboBoxRank.Selected.Value,
+                    'Start Date':DatePickerStartDate.SelectedDate,
+                    'End Date':DatePickerEndDate.SelectedDate,
+                    Description:TextInputDescription.Text
+            });
+            
+            // Place this code after your Patch function in the OnSelect property of the submit button
+            Reset(TextTitle);
+            Reset(TextClient);
+            Reset(ComboBoxRole);
+            Reset(ComboBoxRank);
+            Reset(DatePickerStartDate);
+            Reset(DatePickerEndDate);
+            Reset(TextInputDescription);
+        Text: ="Add Experience"
+        X: =584
+        Y: =393
+        ZIndex: =11
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Items: =Filter('Example Experiences', UserID = CurrentUserID)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Width: =584
+        X: =781
+        Y: =68
+        ZIndex: =12
+
+        Label7 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            ZIndex: =1
+

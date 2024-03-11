@@ -1,0 +1,63 @@
+Welcome As screen:
+    OnVisible: |+
+        =// Set variables from the first and last name of the logged in user
+        Set(
+            CurrentUserFirstName,
+            Office365Users.MyProfile().GivenName
+        );
+        Set(
+            CurrentUserLastName,
+            Office365Users.MyProfile().Surname
+        );
+        Set(
+            CurrentUserEmail,
+            Office365Users.MyProfile().Mail
+        );
+        Set(
+            CurrentUserID,
+            Office365Users.MyProfile().Id
+        );
+        // Set the CurrentItem to the result of a LookUp of a CV associated with the current Microsoft User.
+        Set(
+            CurrentItem,
+            LookUp(
+                'Example CVs V2',
+                UserID = CurrentUserID
+            )
+        );
+        // Set a Boolean UserExistsInSP
+        Set(
+            UserExistsInSP,
+            Not(IsBlank(CurrentItem))
+        );
+        // Set a variable user ID
+        Set(
+            userID,
+            Office365Users.MyProfile().Id
+        )
+        
+
+    Container5_2 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =80
+        LayoutGap: =30
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingTop: =40
+        Width: =697
+        X: =335
+        Y: =520
+        ZIndex: =1
+
+        Button3_1 As button:
+            Text: |-
+                ="Back
+                "
+            ZIndex: =1
+
+        Button4_1 As button:
+            OnSelect: =Navigate(Create)
+            Text: |-
+                ="Next
+                "
+            ZIndex: =2
+

@@ -1,0 +1,118 @@
+Create As screen:
+
+    Container4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =668
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =40
+        Width: =1157
+        X: =104
+        Y: =48
+        ZIndex: =1
+
+        Image1 As image:
+            AlignInContainer: =AlignInContainer.Center
+            Image: =User().Image
+            ZIndex: =1
+
+        Label3 As label:
+            Align: =Align.Center
+            Text: |
+                =User().FullName
+            ZIndex: =2
+
+        Label4 As label:
+            Align: =Align.Center
+            Text: =User().Email
+            Width: =265
+            ZIndex: =3
+
+        Label5 As label:
+            Align: =Align.Center
+            Text: =Office365Users.MyProfileV2().officeLocation
+            ZIndex: =4
+
+        Label6 As label:
+            Text: =
+            ZIndex: =5
+
+        Container5 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =80
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =697
+            X: =335
+            Y: =313
+            ZIndex: =6
+
+            ComboBoxTeam As combobox:
+                AlignInContainer: =AlignInContainer.Start
+                DisplayFields: =["Value"]
+                Items: =["Applied Analytics", "Data Science & Platforms"]
+                SearchFields: =["Value"]
+                SearchItems: =Search(["Applied Analytics", "Data Science & Platforms"],ComboBoxTeam.SearchText,"Value")
+                SelectMultiple: =false
+                ZIndex: =1
+
+            ComboBoxIndustry As combobox:
+                AlignInContainer: =AlignInContainer.Start
+                DisplayFields: =["Value"]
+                Items: |
+                    =["Public Sector", "Finance", "Energy", "Transport", "Maritime Transportation", "Oil & Gas", "Government Services"]
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(["Public Sector", "Finance", "Energy", "Transport", "Maritime Transportation", "Oil & Gas", "Government Services"]
+                    ,ComboBoxIndustry.SearchText,"Value")
+                SelectMultiple: =false
+                ZIndex: =2
+
+        TextInputProfile As text:
+            AlignInContainer: =AlignInContainer.Center
+            Default: ="Text input"
+            Height: =180
+            Width: =686
+            ZIndex: =7
+
+        Container5_1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =80
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingTop: =40
+            Width: =697
+            X: =335
+            Y: =313
+            ZIndex: =9
+
+            ButtonBack As button:
+                OnSelect: =Navigate(Welcome)
+                Text: |-
+                    ="Back
+                    "
+                ZIndex: =1
+
+            ButtonNext As button:
+                OnSelect: |-
+                    =Patch('Example CVs V2', Defaults('Example CVs V2'), {
+                        'First Name': CurrentUserFirstName,
+                        'Last Name': CurrentUserLastName,
+                        Email: CurrentUserEmail,
+                        Location: Office365Users.MyProfile().OfficeLocation,
+                        Team: ComboBoxTeam.Selected.Value,
+                        Industry:ComboBoxIndustry.Selected.Value,
+                        Profile:TextInputProfile.Text
+                    });
+                    Navigate(Skills)
+                Text: |-
+                    ="Next
+                    "
+                ZIndex: =2
+
