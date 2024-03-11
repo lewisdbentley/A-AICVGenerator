@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Skills.ComboBoxSkill.AccessibleLabel"
+                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxTeam.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Skills.ComboBoxSkill.AccessibleLabel",
+                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxTeam.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Skills",
-                "type": "Skills.ComboBoxSkill"
+                "module": "Create",
+                "type": "Create.Container4.Container5.ComboBoxTeam"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Skills.ComboBoxRating.AccessibleLabel"
+                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxIndustry.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Skills.ComboBoxRating.AccessibleLabel",
+                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxIndustry.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Skills",
-                "type": "Skills.ComboBoxRating"
+                "module": "Create",
+                "type": "Create.Container4.Container5.ComboBoxIndustry"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Skills.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Create.Container4.TextInputProfile.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Skills.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Create.Container4.TextInputProfile.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Skills",
-                "type": "Skills.Gallery1"
+                "module": "Create",
+                "type": "Create.Container4.TextInputProfile"
               }
             }
           ],
@@ -98,96 +98,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Skills.Gallery1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Skills.Gallery1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Skills",
-                "type": "Skills.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Skills.Gallery1.Icon5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Skills.Gallery1.Icon5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Skills",
-                "type": "Skills.Gallery1.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Skills.Gallery1.Icon5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Skills.Gallery1.Icon5.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Skills",
-                "type": "Skills.Gallery1.Icon5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -464,19 +374,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxTeam.AccessibleLabel"
+                  "fullyQualifiedName": "Skills.ComboBoxSkill.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxTeam.AccessibleLabel",
+                  "fullyQualifiedName": "Skills.ComboBoxSkill.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Create",
-                "type": "Create.Container4.Container5.ComboBoxTeam"
+                "module": "Skills",
+                "type": "Skills.ComboBoxSkill"
               }
             }
           ],
@@ -494,19 +404,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxIndustry.AccessibleLabel"
+                  "fullyQualifiedName": "Skills.ComboBoxRating.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Create.Container4.Container5.ComboBoxIndustry.AccessibleLabel",
+                  "fullyQualifiedName": "Skills.ComboBoxRating.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Create",
-                "type": "Create.Container4.Container5.ComboBoxIndustry"
+                "module": "Skills",
+                "type": "Skills.ComboBoxRating"
               }
             }
           ],
@@ -524,19 +434,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Create.Container4.TextInputProfile.AccessibleLabel"
+                  "fullyQualifiedName": "Skills.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Create.Container4.TextInputProfile.AccessibleLabel",
+                  "fullyQualifiedName": "Skills.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Create",
-                "type": "Create.Container4.TextInputProfile"
+                "module": "Skills",
+                "type": "Skills.Gallery1"
               }
             }
           ],
@@ -548,6 +458,96 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Skills.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Skills.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Skills",
+                "type": "Skills.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Skills.Gallery1.Icon5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Skills.Gallery1.Icon5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Skills",
+                "type": "Skills.Gallery1.Icon5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Skills.Gallery1.Icon5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Skills.Gallery1.Icon5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Skills",
+                "type": "Skills.Gallery1.Icon5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [

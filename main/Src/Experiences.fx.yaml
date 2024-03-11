@@ -114,8 +114,11 @@ Experiences As screen:
         Y: =68
         ZIndex: =12
 
-        Label7 As label:
+        Label1 As label:
+            Height: =35
             OnSelect: =Select(Parent)
             Text: =ThisItem.Title
+            X: =32
+            Y: =35
             ZIndex: =1
 

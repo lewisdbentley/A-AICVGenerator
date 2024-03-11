@@ -2516,7 +2516,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Label7": {
+    "Label1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -2569,7 +2569,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label7",
+      "Name": "Label1",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
